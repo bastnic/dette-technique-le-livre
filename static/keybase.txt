@@ -1,0 +1,82 @@
+==================================================================
+https://keybase.io/bjaillot
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://bastnic.info
+  * I am bjaillot (https://keybase.io/bjaillot) on keybase.
+  * I have a public key with fingerprint D7F3 BD96 2117 08B7 3C84  1D8A 8B7E AD69 1C74 2FEA
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.7"
+        },
+        "key": {
+            "fingerprint": "d7f3bd96211708b73c841d8a8b7ead691c742fea",
+            "host": "keybase.io",
+            "key_id": "8B7EAD691C742FEA",
+            "uid": "70491f9d7e484bcba5546cc60d71dd00",
+            "username": "bjaillot"
+        },
+        "merkle_root": {
+            "ctime": 1431179786,
+            "hash": "a8ef824b4d00a43bb2627bfbf57e29cb8112899a8e21a882b0426471bd36e9c14712e35a6c29b544c25d3ba0002aa736e66fa60a66d1fdc6ff48c059e824d9f8",
+            "seqno": 218363
+        },
+        "service": {
+            "hostname": "bastnic.info",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1431179972,
+    "expire_in": 157680000,
+    "prev": "1e57b1908bb8eb975edcb2f3c2d778298321d13ef4e4392410f01e71f4114f92",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkn9QFVUUx/nxJCASNUkpE9gBNSXYe/fH3QUmFfGZVk5KqGMG7d29iwuP3cd7
+D/QNQpNJzcMcH+WYoFMSCtGkxI/Jyin7YVaINTqNZCNSQ01AohDG6BjRXUen/O/c
+ez73e873nBu8LzwkLHRn1RFjji99KPT0IA7JWz3jZAWDLc3PZFQwqssgps+OTKWE
+MBlMMfFjxUvSDCvRtDSSVuRNvM2kMuXE4zUsk1JsGkpDTGWqjduPdcMsJB63x7C1
+GA3pHNZkEQKAWAkjTpV4oEkKDYmiiTJQEQ91olDJzZbXd1dV5pZmgaHRWykbLV+a
+Q/lllHcuX0pzZbcSiOVloMsaIrzEYxUrgsCLqiqyGgKaxrI26CWe25ZwkWK4XJbP
+7reEeIpdpMBjWbdMqz7DRgDP0VZlJIm0I8W7mT5SJKJLkMc8lVN4DmMoQoR1rAuI
+QFnFEgBQkmWKQaBIEsQsD0UeAaxxIpFVQENIOEERVShjgedVKGgcVliWhYqCKCOK
+uiKyiihqQNdUUdd5SWUFmdCimqxL1IKXlJoWkwGBxIlcpX32lBsqsfu2x3bHnUJD
+Q00zTN0enttj+SzVctHMZp/PnWGb9vndNrmF4IIjt0UKsGFqdGn/3yqg6N0DkRFM
+ZchWt+EhBYZNCEiUqAXWrkPKqSYgAsJAplvGEsEyEoimYqhzKtQQkqAscRBogCM6
+T3hOhjxgdRYQBHQeAF6X4X82edqnUkglvUahqfjKPISpDITNcYSEhoVETAmzv21I
+dNS0O3/ZdTZ2Yvb5keZFaRsague3v2Nd+WXGg4nvj22rqi4aPeUw4y/8Ff9J+OJ2
+9w2Q9cYi2Sx4MRgl5xYJB+oPsS/VajdGnwPxC1K+bx3og46f65/ZsVuZ2V0zvLBN
+d6y5Z5/jxOMbNzVf/GrtuJsrE/ISWh7ddzg43DT94CNZr/W8XNTd0THUb/7Y9G63
+ERd3cuLK0zFvRrSWJByV5AsprzharOy3HsD5deTMnuEnajad+qD+aq0/uHxjTHL6
+d33f7q52mOZHMOa9lccS0vP2s8ti23gwP7hiLkycFeEsv3xsKG57R9L2f6rWq09F
+XhrecCnpBhOb+rG08MSKpMMJ+edqr9Wvae6vyP3j2dbRzqNhM+O9i+dV73UO9iJ0
+1XTF5H96wJq3ZGJnpNOj1OS9ejGlWZ7fW7MocPPzHVn+sKiHjeNLgr099+/vw43J
+W3pDFsStQiXm3oTxQ2VNPedSsscHjt5b/kPgZnD2tj4rpS4659evJ9jsprejfroe
+XtM4b+z39EG9alXXzamN041A26y6a+JgXLsQ+/xkNTORn9mylVjOskBpUlf/wdmv
+K+1fdE77JrBiymTgycjS07XJU//OdI4d9zec2VW/JKErYuS3FOe6TM/a5PUzdsWv
+Wxlzdu6ezKnH/vww7nLu4uK6gekNX46j6M6cbrD6/MaH6tjJ9pwXdl9P0pyPrfaP
+XD/n6o/47F8=
+=yqmm
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bjaillot
+
+==================================================================

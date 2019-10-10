@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /cache/
+
+Sitemap: https://bastien.jaillot.fr/sitemap.xml

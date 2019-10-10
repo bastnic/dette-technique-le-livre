@@ -1,0 +1,29 @@
+Header set X-Content-Type-Options nosniff
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options DENY
+Header set Content-Security-Policy "default-src 'none';  script-src 'self' https://speakerdeck.com/assets/embed.js; style-src 'self' 'sha256-mQUxgmf7R9RSydu8Io1R7BENCaTYwKyZf5iFmvMF/RE=' data:  ; img-src 'self' data: ;  connect-src 'self';  font-src 'self'; media-src 'self'; object-src 'self' ;  child-src 'self' ;  frame-ancestors 'self' ; manifest-src 'self' ; form-action 'self' ; base-uri 'self'; frame-src https://speakerdeck.com;"
+Header set Referrer-Policy strict-origin-when-cross-origin
+Header set X-UA-Compatible "IE=edge"
+
+AddCharset UTF-8 .html
+
+AddType application/manifest+json webmanifest
+ExpiresActive On
+ExpiresByType application/manifest+json "access plus 1 week"
+
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+Redirect 301 "/index.php/feed/rss2" "/index.xml"
+Redirect 301 "/index.php/feed" "/index.xml"
+Redirect 301 "/index.php/archive" "/archives"
+
+RedirectMatch 301 "^/index\.php/post/2009/07/09/France\-Loisir\-propose\-Daydreams(.*)$" "/archives/2009-07-09-france-loisir-propose-daydreams-une-belle-arnaque"
+RedirectMatch 301 "^/index\.php/post/2007/12/05/Mumuse\-avec\-Google\-Anaytics(.*)$" "/archives/2007-12-05-mumuse-avec-google-anaytics-quasiment-tous-les-pays-du-monde-sont-passes-par-ici/"
+RedirectMatch 301 "^/index\.php/post/2012/12/02/Les\-slides\-de\-ma\-conf(.*)$" "/archives/2012-12-02-les-slides-de-ma-conference-en-complement-de-l-opendata-l-opengovernment-ou-smartgov/"
+RedirectMatch 301 "^/index\.php/tag/(.*)$" "/tags/$1/"
+RedirectMatch 301 "^/index\.xml/category/(.*)/(.*)$" "/tags/$1/index.xml"
+
+# https://forum.alwaysdata.com/viewtopic.php?id=4867
+CheckSpelling on

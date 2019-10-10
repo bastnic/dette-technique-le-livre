@@ -1,0 +1,19 @@
+/* TEAM */
+
+Bastien Jaillot
+- Site    : bastien.jaillot.fr
+- Twitter : @bastnic
+- Location: France
+
+/* SITE */
+
+Languages:
+- French
+
+Technologies:
+- Standards: HTML, CSS, JavaScript
+- Software : Hugo
+- Hosting  : AlwaysData
+
+
+[The humans responsible & technology colophon](http://humanstxt.org/)

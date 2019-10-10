@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+  <article class="page">
+    <header>
+      <h1 class="title">{{ .Title }}</h1>
+      <time class="date" datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+    </header>
+
+    {{ .Content }}
+
+  </article>
+
+{{ end }}

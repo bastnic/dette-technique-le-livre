@@ -1,0 +1,54 @@
+<head>
+  <meta charset="utf-8">
+  {{ .Hugo.Generator }}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Dummy favicon, no need for one (for now) -->
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+  {{ if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="og:type" content="website">
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{- else -}}
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <meta property="og:type" content="article">
+  <meta name="description" content="{{ .Description }}">
+  {{- end }}
+  <meta property="og:url" content="{{ .Permalink }}">
+
+  <link rel="manifest" href="/site.webmanifest">
+
+  <link href="https://twitter.com/bastnic" rel="me">
+  <link href="https://github.com/bastnic" rel="me">
+  <link href="mailto:bastien@jaillot.fr" rel="me">
+  <link href="sms:+33627436506" rel="me">
+  <meta name="author" content="{{ .Site.Author.name }}">
+  {{ if (.Params.canonical) }}
+  <link rel="canonical" href="{{ .Params.canonical }}">
+  {{ else }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ end }}
+  {{ if (.Params.robots) }}
+  <meta name="robots" content="{{ .Params.robots }}">
+  {{ end }}
+
+  <style>
+    body { color: #222; line-height: 1.6; max-width: 70ch; padding: 0 2ch; }
+    img { max-width:100%; vertical-align: bottom; }
+    #title a, h1, h2, strong { color: #000; }
+    article { font-size: 1.2em; }
+    pre { white-space: pre-wrap; }
+    footer { border-top: 1px solid black; }
+    footer p { font-size: smaller; }
+  </style>
+
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arvo:400,700"> -->
+  <!-- <link rel="stylesheet" href="{{ "css/highlight.css" | relURL }}"> -->
+  <!-- <link rel="stylesheet" href="{{ "css/journal.css" | relURL }}"> -->
+  <link href="{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+
+</head>

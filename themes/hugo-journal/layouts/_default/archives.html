@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+<main>
+  <header>
+    <p>Veuillez retrouver ci-dessous les archives du bastnic's blog (feu bastnic.info) de 2004 à 2016.</p>
+  </header>
+
+  {{ range (where .Data.Pages "Type" "bastnic_archive").GroupByDate "2006" -}}
+  <section>
+    <h2>Notes en {{ .Key }}</h2>
+
+    <ul>
+      {{ range .Pages -}}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a> –
+        <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Day }}&nbsp;{{ index $.Site.Data.mois (printf "%d" .Date.Month) }}</time>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{ end }}
+
+</main>
+{{ end }}

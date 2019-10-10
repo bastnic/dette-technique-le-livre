@@ -1,0 +1,6 @@
+<header>
+    <h1 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  {{- if (and (.IsHome) (.Site.Params.tagline)) -}}
+  <p>{{ .Site.Params.tagline }}</p>
+  {{- end }}
+</header>
