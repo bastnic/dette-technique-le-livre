@@ -1,4 +1,9 @@
-# Glossaire
+---
+slug: glossaire
+title: Glossaire
+type: book-item
+weight: 15
+---
 
 ## Agilité
 

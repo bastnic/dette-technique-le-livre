@@ -1,4 +1,4 @@
-baseURL = "https://bastien.jaillot.fr/dette-technique/"
+baseURL = "https://bastien.jaillot.fr/dette-technique-test/"
 languageCode = "fr"
 DefaultContentLanguage = "fr"
 title = "Livre \"La dette technique\" par Bastien Jaillot"

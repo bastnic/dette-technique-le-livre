@@ -1,4 +1,9 @@
-# Prévenir
+---
+slug: 02-prévenir
+title: Chapitre 2 - Prévenir
+type: book-item
+weight: 12
+---
 
 À l'issue du chapitre précédent, nous sommes donc en mesure d'identifier la dette technique et de prendre la mesure de ses impacts dans un projet.
 
@@ -15,7 +20,7 @@ Il faut bien prendre conscience que la dette technique est inévitable : pour co
 
 Le simple fait d’être soumis à des contraintes (humaines, budgétaires, temporelles) pousse à faire des choix et des concessions à un moment donné sur l'un des axes prix / qualité / délai. 
 
-![Diagramme Prix-Qualité-Délais](triptyque-prix-qualite-delais.jpg)
+![Diagramme Prix-Qualité-Délais](../../images/triptyque-prix-qualite-delais.jpg)
 
 Le prix et le délai étant les facteurs les moins négociables, c'est le plus souvent sur la qualité que les projets se voient amputés, ce qui provoque la dette technique.   
 La qualité étant difficilement quantifiable, sa gestion pose un véritable problème. Les décideurs ne comprennent que trop peu les enjeux techniques de la qualité (quand ils s’y intéressent). Sachant que la dette technique est inévitable, où placer le curseur de la qualité minimale acceptable ? Selon les contextes de projet, j’accepte ou non des solutions techniques « sales ».   

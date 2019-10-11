@@ -1,4 +1,9 @@
-# Bibliographie
+---
+slug: bibliographie
+title: Bibliographie
+type: book-item
+weight: 16
+---
 
 ## Sources
 - *Working Effectively with Legacy Code*, Michael Feathers (<http://www.amazon.fr/Working-Effectively-Legacy-Michael-Feathers-ebook/dp/B005OYHF0A>)

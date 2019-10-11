@@ -1,4 +1,9 @@
-# Résoudre
+---
+slug: 03-résoudre
+title: Chapitre 3 - Résoudre
+type: book-item
+weight: 13
+---
 
 Vous êtes maintenant en mesure d’identifier et d'essayer de prévenir la dette technique dans vos projets. Mais que faire quand celle-ci est déjà en place ? Quel « chemin de migration » est possible pour vous aider à la rembourser et ainsi repartir sur de bonnes bases ?
 

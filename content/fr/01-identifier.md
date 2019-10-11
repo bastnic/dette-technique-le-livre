@@ -1,4 +1,9 @@
-# Identifier
+---
+slug: 01-identifier
+title: Chapitre 1 - Identifier
+type: book-item
+weight: 11
+---
 
 L'objectif de ce chapitre est de présenter ce qu'est la dette technique et en quoi elle est inévitable.
 
@@ -52,7 +57,7 @@ Pour schématiser :
 
 Pour vous aider à vous y retrouver, voici quatre types de dette technique que j’ai identifiés.
 
-![Schéma inspiré de celui de Martin Fowler - http://martinfowler.com/bliki/TechnicalDebtQuadrant.html](quadrant.jpg)
+![Schéma inspiré de celui de Martin Fowler - http://martinfowler.com/bliki/TechnicalDebtQuadrant.html](../../images/quadrant.jpg)
 
 Commençons par la plus préjudiciable.
 

@@ -1,4 +1,10 @@
-# Pourquoi ce livre ?
+---
+slug: introduction
+title: Introduction
+type: book-item
+weight: 10
+---
+Pourquoi ce livre ?
 
 Un surnom m’a un jour été donné : « Pompier du code ». J’aime cette notion. Un pompier c’est 50 % d’entraînement, 40 % de prévention et 10 % d’opération de secours.
 Ça correspond bien à ce livre, qui a pour but de sensibiliser à la dette technique et de donner des pistes pour la prévenir. Mon postulat est qu’une équipe sensibilisée et bien entraînée a bien moins de chances d’être un jour vraiment paralysée par la dette technique. Le dernier chapitre (qui est donc aussi le plus court) traite des solutions possibles pour la résorber lorsqu'il est déjà trop tard.

@@ -7,7 +7,7 @@
 hugo serve -D
 
 # build et déploiement
-hugo && rsync -avz --delete public/ bjaillot-alwaysdata:/home/bjaillot/bjaillot
+hugo && rsync -avz --delete public/ bjaillot-alwaysdata:/home/bjaillot/bjaillot-dette-technique
 ```
 
 ## Checkers

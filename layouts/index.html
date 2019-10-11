@@ -1,13 +1,11 @@
 {{ define "main" }}
 <main id="bio">
-blabla dette technique
+<p>Un livre publié en 2015 aux éditions du 13h37 et toujours <a href="https://boutique.letrainde13h37.fr/products/la-dette-technique-bastien-jaillot">achetable en ligne</a> (ebook ou papier).
+
 <ul>
-    <li><a href="01-intro/04-intro/">Introduction</a>
-    <li><a href="02-identifier/01-identifier/">Chapitre 1 : identifier</a>
-    <li><a href="03-prevenir/01-prevenir/">Chapitre 2 : prévenir</a>
-    <li><a href="04-resoudre/01-resoudre/">Chapitre 3 : résoudre</a>
-    <li><a href="05-outro/01-outro/">Conclusion</a>
-    <li><a href="05-outro/03-about_author/">A propos de l'auteur</a>
+{{ range first 10 .Pages }}
+	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end }}
 </ul>
 </main>
 {{ end }}

@@ -1,4 +1,9 @@
-# En conclusion
+---
+slug: conclusion
+title: Conclusion
+type: book-item
+weight: 14
+---
 
 La dette technique est une notion impérative à connaître pour quiconque participe, de près ou de loin, à un projet Web. 
 
