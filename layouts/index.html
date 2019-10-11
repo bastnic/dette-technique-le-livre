@@ -1,11 +1,17 @@
 {{ define "main" }}
 <main id="bio">
-<p>Un livre publié en 2015 aux éditions du 13h37 et toujours <a href="https://boutique.letrainde13h37.fr/products/la-dette-technique-bastien-jaillot">achetable en ligne</a> (ebook ou papier).
+<p>Un livre Web <br>publié en 2015 aux éditions du 13h37 et toujours <a href="https://boutique.letrainde13h37.fr/products/la-dette-technique-bastien-jaillot">achetable en ligne</a> (ebook ou papier).
+</p>
 
-<ul>
+<nav>
+<ol start="0">
 {{ range first 10 .Pages }}
-	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	<li><a href="{{ .RelPermalink }}"><cite>{{ .Title }}</cite></a></li>
 {{ end }}
-</ul>
+</ol>
+</nav>
+
+<!-- <h2>Ce qu'ils en disent</h2> -->
+
 </main>
 {{ end }}

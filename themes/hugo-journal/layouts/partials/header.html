@@ -1,6 +1,17 @@
 <header>
-    <h1 id="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+{{- if .IsHome -}}
+	<hgroup>
+		<a href="fr/introduction/">
+			<h1>La dette technique</h1>
+			<h2>par Bastien Jaillot</h2>
+		</a>
+	</hgroup>
+{{ else }} 
+    <!-- <h1 id="title"> -->
+		<a href="{{ .Site.BaseURL }}">{{ .Site.Params.ShortTitle }}</a>
+	<!-- </h1> -->
   {{- if (and (.IsHome) (.Site.Params.tagline)) -}}
   <p>{{ .Site.Params.tagline }}</p>
   {{- end }}
+{{- end }}
 </header>

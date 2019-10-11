@@ -1,14 +1,14 @@
 {
   "background_color": "#FFFFFF",
   "theme_color": "#000000",
-  "name": "Bastien Jaillot",
+  "name": "Livre \"La dette tehcnique\" par Bastien Jaillot",
   "author": "Bastien Jaillot",
   "short_name": "Jaillot",
   "display": "standalone",
   "default_locale": "fr",
   "manifest_version": 1,
   "version": "un",
-  "description": "Bienvenue sur un espace d’échanges et de liens",
+  "description": "Lecture en ligne du livre la dette technique",
   "icons": [
   ]
 }

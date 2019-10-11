@@ -11,6 +11,7 @@ rssLimit = 0
 
 [params]
   description = "Bastien Jaillot — développeur web — co-fondateur @jolicode et @opengovfr"
+  shortTitle = "La dette technique"
 
 [Author]
   name = "Bastien Jaillot"
@@ -24,13 +25,3 @@ rssLimit = 0
   #linkedin = "username"
   paypal = "bjaillot"
   telegram = "Bastien Jaillot"
-
-  [[menu.main]]
-      name = "Blog"
-      url = ""
-      weight = 1
-
-  [[menu.main]]
-      name = "About"
-      url = "page/about/"
-      weight = 3
