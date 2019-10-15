@@ -1,7 +1,7 @@
 ---
 slug: conclusion
 title: Conclusion
-type: book-item
+type: book-page
 weight: 14
 ---
 

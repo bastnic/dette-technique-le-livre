@@ -1,7 +1,7 @@
 ---
 slug: 01-identifier
 title: Chapitre 1 - Identifier
-type: book-item
+type: book-page
 weight: 11
 ---
 
@@ -93,7 +93,7 @@ Cette dette est la plus courante et est souvent due aux délais de réalisation 
 
 Voici un exemple de scénario réaliste et les questions qu’il pose tout au long du projet. Cet exemple est issu de l’article « Dette technique 101 » (<https://medium.com/@joaomilho/festina-lente-e29070811b84>) de Maiz Lulkin et traduit par Frank Taillandier sur le blog d’Occitech (<http://www.occitech.fr/blog/2014/11/intro-dette-technique/>)
 
-@T13h37:OPENBOX
+<aside class="story">
 
 Vous commencez à écrire une application. Au début il n’y a pas besoin de rôles utilisateurs. Tout le monde peut tout faire. À un moment donné vous avez deux permissions différentes pour une action spécifique, comme par exemple un type d’utilisateur qui peut voir des rapports et les autres qui ne peuvent pas. L’équipe technique considère la possibilité de créer un système complet de permissions à part entière. Mais à ce stade, ça ressemble vraiment à quelque chose d’inutilement complexe. Une méthode dans la logique métier et une autre dans la couche de présentation feront le boulot.
 
@@ -109,8 +109,7 @@ C’est le moment où il faut décider si on contracte de la dette. Toutes les i
 
 Vu le temps total, c’est toujours mieux de partir sur la meilleure conception possible. Tout comme c’est mieux pour une entreprise d’être en mesure de faire de nouveaux investissements sans avoir besoin d’aller à la banque. Et dans ce genre d’éventualités, partir sur le premier scénario est le plus sage.
 Une mise en garde cependant : même ce type de compromis ne peut pas être fait en permanence.
-
-@T13h37:CLOSEBOX
+</aside>
 
 ### La dette inévitable
 

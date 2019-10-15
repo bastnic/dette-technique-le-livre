@@ -1,7 +1,7 @@
 ---
 slug: bibliographie
 title: Bibliographie
-type: book-item
+type: book-page
 weight: 16
 ---
 

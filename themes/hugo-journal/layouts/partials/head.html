@@ -59,24 +59,27 @@
     --color-red: rgba(204,0,0,0.9);
     --color-white: white;
     --color-primary: rgba(158, 179, 58, 1);
+    --color-primary-dark: rgba(106, 120, 39, 1);
+    --color-primary-content: rgba(0, 0, 0, 1);
     --font-size-base: 1.4rem;
     --line-height-base: 1.5;
+    --font-type-content: Georgia, serif;
+    --font-type-headlines: Inconsolata, sans-serif;
+    --max-width: 28rem;
 }
 
 html {
-    font-size: 1em; /* 16px @ root em of 1 */
-    font-size: calc( 1em + (2.5 - 1) * ( (100vw - 20em) / ( 100 - 20) ));
     font-size: var(--font-size-base);
 }
 @media all and (min-width: 100em) {
     html {
-        font-size: 2.5em; /* 40px @ root em of 1, 40/16 (root em is 1 the fluid root) */
+        /* font-size: 2.5em; 40px @ root em of 1, 40/16 (root em is 1 the fluid root) */
     }
 }
 body {
     background-color: var(--color-white);
     color: black;
-    font-family: Georgia, serif;
+    font-family: var(--font-type-content);
     font-weight: normal;
     font-variant-ligatures: common-ligatures;
     font-variant-numeric: oldstyle-nums;
@@ -122,7 +125,7 @@ a {
 a:link,
 a:visited {
     background-color: transparent;
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
 }
 a:hover,
 a:focus {
@@ -189,39 +192,39 @@ li {
     }
 }
 h1 {
-    font-size: calc( 1.25em + 5 * ( (100vw - 20em) / ( 100 - 20) ));
+    /* font-size: calc( 1.25em + 5 * ( (100vw - 20em) / ( 100 - 20) )); */
     font-size: 2.45em;
     font-weight: normal;
     line-height: 1;
     margin: 0;
 }
 h2 {
-    font-size: calc( 1.5em + (4.5 - 1.5) * ( (100vw - 20em) / ( 100 - 20) ));
+    /* font-size: calc( 1.5em + (4.5 - 1.5) * ( (100vw - 20em) / ( 100 - 20) )); */
     font-size: 2.10em;
     font-weight: normal;
     line-height: 1.125;
-    margin: 6rem 0 0;
+    margin: 4rem 0 0;
 }
 h3 {
-    font-size: 1.25em; /* 20px @ root em of 1 (20/16) */
-    font-size: calc( 1.25em + (3.75 - 1.25) * ( (100vw - 20em) / ( 100 - 20) ));
+    /* font-size: calc( 1.25em + (3.75 - 1.25) * ( (100vw - 20em) / ( 100 - 20) )); */
+    font-size: 1.75em; /* 20px @ root em of 1 (20/16) */
     font-weight: normal;
     line-height: 1.25;
-    margin: 4rem 0 0;
+    margin: 2rem 0 0;
 }
 h4 {
     font-size: 1.125em; /* 18px @ root em of 1 (18/16) */
     font-size: calc( 1.125em + (3.375 - 1.125) * ( (100vw - 20em) / ( 100 - 20) ));
     font-weight: normal;
     line-height: 1.325;
-    margin: 3rem 0 0;
+    margin: 1.8rem 0 0;
 }
 h5 {
     font-size: 1em; /* 16px @ root em of 1 (16/16) */
     font-size: calc( 1em + (3 - 1) * ( (100vw - 20em) / ( 100 - 20) ));
     font-weight: normal;
     line-height: 1.5;
-    margin: 2rem 0 0;
+    margin: 1.5rem 0 0;
 }
 @media all and (min-width: 100em) {
     h1 {
@@ -343,22 +346,24 @@ header hgroup {
     min-height: calc(100vh - 2em);
 }
 header hgroup h1 {
-    font-size: calc( 2.25em + (11.25 - 2.25) * ( (100vw - 20em) / ( 100 - 20) ));
+    font-size: calc( 2.25em + 7 * ( (100vw - 20em) / ( 100 - 20) ));
 }
-header hgroup h1::first-line {
+/* header hgroup h1::first-line {
     font-size: 1.25em;
-}
+} */
 header hgroup,
 header > a {
     display: block;
-    max-width: 25em;
+    max-width: var(--max-width);
+    /* padding: 0 2ch; */
     margin-left: auto;
     margin-right: auto;
 }
 header > a {
-    font-family: Futura, 'Gill Sans', 'Helvetica Neue', Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+    font-family: var(--font-type-headlines);
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1em;
     height: 0.8em;
     line-height: 1;
 }
@@ -372,7 +377,7 @@ header a:focus {
 
 main {
     display: block;
-    max-width: 25em;
+    max-width: var(--max-width);
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
@@ -417,10 +422,23 @@ main > p:first-of-type cite {
     white-space: pre;
 }
 
+main a {
+    text-decoration: underline;
+}
+
 @media print {
     section {
         page-break-before: always;
     }
+}
+
+main .story {
+    border-width: 5px;
+    border-color: var(--color-primary);
+    border-bottom: solid;
+    border-top: solid;
+    padding: 0 1em;
+    background-color: #f0f0ea;
 }
 
 aside li {
@@ -441,9 +459,22 @@ aside li a {
 nav {
     display: block;
 }
+nav h2,
+nav ol {
+    margin-top: 1rem;
+}
 nav a {
     display: block;
     padding: 1em;
+    text-decoration: none;
+}
+nav a:link,
+nav a:visited {
+    color: var(--color-primary-dark);
+}
+nav a:hover,
+nav a:focus {
+    color: var(--color-white);
 }
 nav cite span {
     font-style: normal;
@@ -454,8 +485,8 @@ nav cite span {
 }
 nav a[rel="next"] {
     text-align: center;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
+    border-top: 1px solid  var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
 }
 nav a[rel="next"] cite {
     letter-spacing: 0.05em;
@@ -467,14 +498,16 @@ nav a[rel="next"] cite span {
 nav a[rel="author"] cite {
     font-style: normal;
 }
-
-nav ol,
+nav section {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
 nav li {
     display: block;
     margin: 0;
 }
 nav li:not(:last-child) {
-    border-bottom: 1px dotted rgba(0,0,0,0.2);
+    border-bottom: 1px dotted var(--color-primary);
 }
 nav li cite {
     display: block;

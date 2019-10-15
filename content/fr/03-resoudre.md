@@ -1,7 +1,7 @@
 ---
 slug: 03-résoudre
 title: Chapitre 3 - Résoudre
-type: book-item
+type: book-page
 weight: 13
 ---
 
@@ -179,14 +179,12 @@ Le processus sera donc itératif : plutôt que de tout refaire d’un coup, nous
 Dans un projet, on se complique souvent la vie car les composants dont on a besoin à l’instant présent ne sont pas encore disponibles, ou pas dans une version stable. On utilise alors de vieilles versions, des composants moins intéressants, etc.   
 C’est le moment de questionner ces choix et de se rendre compte qu’ils ne sont plus d’actualité. C’est d’ailleurs pour cette raison qu’il est intéressant de documenter ces choix d’architecture dans le projet, afin de pouvoir revenir dessus plus facilement.
 
-@T13h37:OPENBOX
-
+<aside class="story">
 Exemple : il y a quelques années, j’utilisais sur un projet un merveilleux module nommé *Search API* qui me permettait de me baser sur des *indexes* de recherche pour pas mal de choses. Une *API* vraiment super. Ce module permet d’avoir plusieurs moteurs, comme *Elasticsearch*, *Solr* ou base de données. À l’époque, *Elasticsearch* était trop jeune et le module base de données ne gérait pas les recherches avec une condition « OU », qui était primordiale pour ce projet. Nous étions donc partis sur *Solr*.   
 Quelques mois plus tard, l’hébergeur revint vers nous pour râler à propos de l’installation de *Solr* qui ne convenait plus, qu’il fallait changer de serveur, etc. Une manipulation à ne pas prendre à la légère.   
 Pragmatique dans l’âme, j'ai alors cherché un moyen de contourner le problème. Apparemment, l’intégration base de données de *Search API* permettait dorénavant de faire des requêtes « OU », ce qu’il n’était pas capable de faire précédemment.   
 Mise à jour du module, suppression de *Solr*, tout fut réglé en 15 minutes.
-
-@T13h37:CLOSEBOX
+</aside>
 
 Là encore, la méthode des « cinq pourquoi » a fonctionné (il n’est pas toujours obligatoire d’en arriver à cinq) : 
 

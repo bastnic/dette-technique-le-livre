@@ -1,7 +1,7 @@
 ---
 slug: glossaire
 title: Glossaire
-type: book-item
+type: book-page
 weight: 15
 ---
 

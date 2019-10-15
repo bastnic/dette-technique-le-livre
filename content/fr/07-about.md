@@ -1,7 +1,7 @@
 ---
 slug: a-propos
 title: A propos
-type: book-item
+type: book-page
 weight: 17
 ---
 ## À propos de l’auteur

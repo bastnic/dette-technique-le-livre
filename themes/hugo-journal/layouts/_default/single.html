@@ -25,18 +25,4 @@
     </div>
   </div>
 </main>
-
-{{ if .PrevInSection }}
-<nav>
-	<a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}" rel="next">{{ .PrevInSection.Title }}</a>
-<ol start="0">
-{{ range first 10 .Site.Pages }}
-      {{ if eq .Type "book-item" }}
-	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
-{{ end }}
-</ol>
-</nav>
-{{ end }}
-
 {{ end }}

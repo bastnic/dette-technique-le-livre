@@ -1,0 +1,25 @@
+{{ define "main" }}
+<main>
+    <article role="main" class="book-page">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+</main>
+
+{{ if .PrevInSection }}
+	<nav>
+		<a href="{{ .PrevInSection.Permalink }}" title="{{ .PrevInSection.Title }}" rel="next">{{ .PrevInSection.Title }} &rarr;</a>
+    <section>
+      <h2>Sommaire</h2>
+    <ol start="0">
+    {{ range first 10 .Site.Pages }}
+      {{ if eq .Type "book-page" }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+    </ol>
+  </section>
+	</nav>
+{{ end }}
+
+{{ end }}

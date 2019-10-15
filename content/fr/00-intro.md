@@ -1,7 +1,7 @@
 ---
 slug: introduction
 title: Introduction
-type: book-item
+type: book-page
 weight: 10
 ---
 Pourquoi ce livre ?
