@@ -2,7 +2,7 @@ Header set X-Content-Type-Options nosniff
 Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 Header set X-XSS-Protection "1; mode=block"
 Header set X-Frame-Options DENY
-Header set Content-Security-Policy "default-src 'none';  script-src 'self' https://speakerdeck.com/assets/embed.js; style-src 'self' 'sha256-mQUxgmf7R9RSydu8Io1R7BENCaTYwKyZf5iFmvMF/RE=' data:  ; img-src 'self' data: ;  connect-src 'self';  font-src 'self'; media-src 'self'; object-src 'self' ;  child-src 'self' ;  frame-ancestors 'self' ; manifest-src 'self' ; form-action 'self' ; base-uri 'self'; frame-src https://speakerdeck.com;"
+#Header set Content-Security-Policy "default-src 'none';  script-src 'self' https://speakerdeck.com/assets/embed.js; style-src 'self' 'sha256-UR/DVV2chlSTrLNAjBwnwUkXOZ6PHw8yFwcm/2/sQOM=' data:  ; img-src 'self' data: ;  connect-src 'self';  font-src 'self'; media-src 'self'; object-src 'self' ;  child-src 'self' ;  frame-ancestors 'self' ; manifest-src 'self' ; form-action 'self' ; base-uri 'self'; frame-src https://speakerdeck.com;"
 Header set Referrer-Policy strict-origin-when-cross-origin
 Header set X-UA-Compatible "IE=edge"
 

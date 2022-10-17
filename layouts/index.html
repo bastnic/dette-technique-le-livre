@@ -1,17 +1,56 @@
 {{ define "main" }}
 <main id="bio">
-<p>Un livre Web <br>publié en 2015 aux éditions du 13h37 et toujours <a href="https://boutique.letrainde13h37.fr/products/la-dette-technique-bastien-jaillot">achetable en ligne</a> (ebook ou papier).
+<p>Un livre Web <br>publié en 2015 aux éditions du 13h37, consultement librement ici-même.
+L'ouvrage vous plaît ? Il est <a href="https://boutique.letrainde13h37.fr/products/la-dette-technique-bastien-jaillot">achetable en ligne</a> (ebook ou papier).
 </p>
 
 <nav>
+<h2>Sommaire</h2>
 <ol start="0">
-{{ range first 10 .Pages }}
+{{ range first 10 .Site.Pages }}
+	{{ if eq .Type "book-page" }}
 	<li><a href="{{ .RelPermalink }}"><cite>{{ .Title }}</cite></a></li>
+	{{ end }}
 {{ end }}
 </ol>
 </nav>
 
-<!-- <h2>Ce qu'ils en disent</h2> -->
+<h2>Ce qu'ils en disent</h2>
 
+<blockquote>
+<p>Merci d'avoir pris le temps d'écrire ce livre basé sur du vécu, du réel, du concret. Le parallèle entre ce qui est expliqué en terme de causes de la dette technique et notre (mon ?) quotidien aide vraiment à comprendre ces causes et à apprendre à les anticiper. Superbe travail ! À mettre entre les mains de tous les porteurs de projets, CTO, Lead Dev ....</p>
+</blockquote>
+
+<blockquote>
+	<p> Ce livre nous plonge dans l'univers quotidien des projets. Il apporte une lumière pragmatique avec un angle orignal, qui bouscule les idées reçues. Les pratiques abordées permettent d'être rapidement adoptées et de nous faire gagner notre bien le plus précieux : le temps.
+		</p>
+</blockquote>
+
+<blockquote>
+	<p> Beaucoup de situations déjà vécues... Quelques belles explications et propositions pour y remédier. Le tout écrit simplement, facile à lire (même sans été dév. ;)) et bien documenté pour élargir la réflexion.
+		</p>
+</blockquote>
+
+<blockquote>
+	<p> une plongée salutairé dans la réalité des productions numériques. À lire avant, pendant et après tout investissement dans le code.
+		</p>
+</blockquote>
+
+<blockquote>
+	<p> Un livre incontournable pour toute personne travaillant directement ou indirectement sur un projet (web) ! Je dirais même plus : une saine lecture pour comprendre la complexité du monde technologique/numérique dans lequel nous vivons, et penser l'avenir sereinement et joyeusement !
+		</p>
+</blockquote>
+
+<!-- <blockquote>
+<p></p>
+</blockquote>
+
+<blockquote>
+<p></p>
+</blockquote>
+
+<blockquote>
+	<p></p>
+</blockquote> -->
 </main>
 {{ end }}

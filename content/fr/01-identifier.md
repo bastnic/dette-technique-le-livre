@@ -1,6 +1,8 @@
 ---
 slug: 01-identifier
 title: Chapitre 1 - Identifier
+preTitle: Chapitre 1
+shortTitle: Identifier
 type: book-page
 weight: 11
 ---

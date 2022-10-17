@@ -176,7 +176,7 @@ Pour cela, il faut développer ce qui s'appelle une "Culture d'entreprise".
 Selon Wikipédia, la culture d’entreprise est :
 
 > l’ensemble des éléments particuliers qui expliquent les bases du fonctionnement d’une organisation […], dans un certain sens, un ensemble de valeurs, de mythes, de rites, de tabous et de signes partagés par la majorité des intervenants   
-— <https://fr.wikipedia.org/wiki/Culture_d%27entreprise> – tiré de *Culture d'entreprise*, par Christophe Durand, Jean-François Fili, Audrey Hénault, 2000 (<http://culture.entreprise.free.fr/#_Toc476995192>).
+— [Wikipédia](https://fr.wikipedia.org/wiki/Culture_d%27entreprise) – tiré de [Culture d'entreprise](http://culture.entreprise.free.fr/#_Toc476995192), par Christophe Durand, Jean-François Fili, Audrey Hénault, 2000.
 
 En cela, le développement de projet est assez proche d'un sport d'équipe. Or, dans un sport d'équipe, un des éléments les plus privilégiés est l'*esprit* d'équipe, qui ne doit pas être sacrifié.
 
@@ -211,7 +211,7 @@ Créer une culture d’entreprise est difficile, la maintenir l'est tout autant.
 
 Un premier moyen peut être de sensibiliser les équipes au partage de connaissances.
 
-Vous pouvez par exemple organiser des mini conférences internes, ou faire venir des personnes externes le temps d’un repas pour qu’elles vous parlent d’un sujet qui leur tient à cœur (voir l’initiative brown bags lunch (<http://www.brownbaglunch.fr/>)).   
+Vous pouvez par exemple organiser des mini conférences internes, ou faire venir des personnes externes le temps d’un repas pour qu’elles vous parlent d’un sujet qui leur tient à cœur (voir l’initiative [brown bags lunch](http://www.brownbaglunch.fr/)).   
 Trouver du temps au sein de l’entreprise est nécessaire pour faire émerger l’intelligence collective. Faire travailler moins permet, paradoxalement, de produire plus. 
 
 L’apport d’un regard nouveau étant souvent bénéfique, il vous faudra donc évaluer le juste ratio entre équipe habituée à travailler ensemble et apport de sang neuf.
@@ -240,15 +240,17 @@ Un autre point qui ne concerne pas le recrutement, mais qui mérite d'être ment
 Sans même parler de l’effet bénéfique de la valorisation pour la personne ainsi "choyée". 
 
 
-<aside class="story">
-Exemples concrets : 
+<div class="story">
+<p>Exemples concrets : </p>
 
-- Sur un projet où j’intervenais en indépendant, j’exécutais le même script qu’une autre personne de l’équipe. Avec mon équipement et ma configuration, un script prenait vingt minutes alors qu’il prenait cinq heures sur la machine d’un autre intervenant… ;
-- Sur un autre projet, un graphiste était obligé de fermer son navigateur pour pouvoir ouvrir son logiciel de design. Pratique… ;
-- Dans un ancien emploi, je préférais travailler avec ma machine personnelle plutôt que mon matériel attribué : je n’aimais pas m'abîmer les yeux sur le mauvais écran ni être freiné par un disque qui "grattait" alors que mon ordinateur était équipé d'un des tout derniers disques flash ;
-- Une bonne chaise est agréable. Si une personne souhaite travailler debout, c’est bien aussi, favorisez-le ;
-- Si possible, ayez une douche dans vos locaux pour motiver votre équipe à venir en faisant du sport ou à en faire pendant une pause.
-</aside>
+<ul>
+<li>Sur un projet où j’intervenais en indépendant, j’exécutais le même script qu’une autre personne de l’équipe. Avec mon équipement et ma configuration, un script prenait vingt minutes alors qu’il prenait cinq heures sur la machine d’un autre intervenant… ;</li>
+<li>Sur un autre projet, un graphiste était obligé de fermer son navigateur pour pouvoir ouvrir son logiciel de design. Pratique… ;</li>
+<li>Dans un ancien emploi, je préférais travailler avec ma machine personnelle plutôt que mon matériel attribué : je n’aimais pas m'abîmer les yeux sur le mauvais écran ni être freiné par un disque qui "grattait" alors que mon ordinateur était équipé d'un des tout derniers disques flash ;</li>
+<li>Une bonne chaise est agréable. Si une personne souhaite travailler debout, c’est bien aussi, favorisez-le ;</li>
+<li>Si possible, ayez une douche dans vos locaux pour motiver votre équipe à venir en faisant du sport ou à en faire pendant une pause.</li>
+</ul>
+</div>
 
 On pourrait penser que je m’égare sur le sujet de la dette technique. Mais pas tant que ça : si vous voulez éviter de rembourser trop de dettes plus tard, investir sur l’humain ne peut qu’améliorer les choses.
 
@@ -418,13 +420,15 @@ Ces mesures peuvent inclure (liste non exhaustive) :
 
 Grâce à toutes ces mesures mises en place, vous serez en confiance au moment de déployer : si quelque chose ne marche plus, ce sera certainement visible dans les graphes.
 
-<aside class="story">
-Voici quelques exemples de mesures qui ont permis de sauver des situations qui auraient pu traîner bien plus longtemps :
+<div class="story">
+<p>Voici quelques exemples de mesures qui ont permis de sauver des situations qui auraient pu traîner bien plus longtemps :</p>
 
-- Symptôme : une forte augmentation de l’utilisation en bande passante de deux serveurs, associée à une métrique (nombre d’éléments maximum dans un panier). Un « pirate en herbe » cherchait en fait les failles du site en testant de nombreux cas à la marge. C’est la combinaison des différents facteurs qui nous a permis de le détecter. Sans cela, cette première tentative d’attaque aurait pu être invisible, jusqu’à ce qu’il réussisse et que son action soit dommageable ;
-- Symptôme : explosion du taux d’erreurs de type *timeout*, les *logs* serveurs ne donnant aucun renseignement sur la page concernée. C’est en observant les métriques agrégées que nous avons pu constater que l’action « inscription utilisateur » avait un temps moyen dans la norme mais des temps maximums qui explosaient les plafonds. Nous savions donc où chercher dans le code et il s’est avéré qu’une fonction de cryptographie utilisée était sensible à la charge serveur. Si le serveur était très occupé, alors le temps nécessaire pour exécuter cette fonction était exponentiel, dépassant les 30 s du *timeout*.
-- Symptôme : sur une mission où j’ai un jour effectué un audit, l’entreprise comptait jeter le *CMS* qu’ils avaient sélectionné car il était trop lent, et donc tout recoder. La cause se trouvait dans un mauvais algorithme (requête complexe à l’intérieur d’une boucle) appelé sur chaque page. La solution prenait deux minutes à implémenter, encore fallait-il savoir où chercher…
-</aside>
+<ul>
+<li>Symptôme : une forte augmentation de l’utilisation en bande passante de deux serveurs, associée à une métrique (nombre d’éléments maximum dans un panier). Un « pirate en herbe » cherchait en fait les failles du site en testant de nombreux cas à la marge. C’est la combinaison des différents facteurs qui nous a permis de le détecter. Sans cela, cette première tentative d’attaque aurait pu être invisible, jusqu’à ce qu’il réussisse et que son action soit dommageable ;</li>
+<li>Symptôme : explosion du taux d’erreurs de type <i>timeout</i>, les <i>logs</i> serveurs ne donnant aucun renseignement sur la page concernée. C’est en observant les métriques agrégées que nous avons pu constater que l’action « inscription utilisateur » avait un temps moyen dans la norme mais des temps maximums qui explosaient les plafonds. Nous savions donc où chercher dans le code et il s’est avéré qu’une fonction de cryptographie utilisée était sensible à la charge serveur. Si le serveur était très occupé, alors le temps nécessaire pour exécuter cette fonction était exponentiel, dépassant les 30 s du <i>timeout</i>.</li> 
+<li>Symptôme : sur une mission où j’ai un jour effectué un audit, l’entreprise comptait jeter le <i>CMS</i> qu’ils avaient sélectionné car il était trop lent, et donc tout recoder. La cause se trouvait dans un mauvais algorithme (requête complexe à l’intérieur d’une boucle) appelé sur chaque page. La solution prenait deux minutes à implémenter, encore fallait-il savoir où chercher…</li>
+</ul>
+</div>
 
 Dans ces exemples, avec pour seules indications « l’application est lente et il y a des erreurs », il est naturel de faire des erreurs de jugement et d’essayer d’optimiser l’existant pour régler les problèmes.
 Mais sans mesures réelles ce travail ne peut être fait qu’à l’aveuglette. 
@@ -500,17 +504,17 @@ Comme il y a de toute manière des *bugs* dans un projet, ils seront bien plus f
 Une des meilleures pratiques mise en avant et pourtant rarement appliquée est le *TDD* (*Test Driven Development*, le "Développement Dirigé par les Tests"). Pour une fonctionnalité donnée, on écrit les tests avant d’écrire le code, ce qui permet de tester les scénarios validant le bon fonctionnement du code.   
 Écrire les tests en amont permet de réfléchir et de valider l’*API* publique de cette fonctionnalité et ainsi de se concentrer sur le design public du code avant son implémentation. Cette pratique a l'immense avantage de valider ou d'invalider certaines décisions d’implémentation car les tests sont les premiers utilisateurs du code à écrire. 
 
-<aside class="story">
-Prenons un exemple : j’ai récemment eu à tester un scénario qui impliquait le dépôt d’un *cookie* après une certaine requête. Le nombre de scénarios étant phénoménal (connecté / déconnecté, administrateur ou pas, *cookie* déjà présent, etc.), les reproduire à chaque itération de code était tellement pénible qu’on ne recettait plus tous les cas : on se contentait de tester le précédent qui avait échoué.   
-Il aurait donc mieux valu avant tout écrire une suite de tests comprenant les scénarios que l’on allait rencontrer. Exécuter cette suite de tests pendant le développement aurait ainsi ensuite permis de vérifier la validité du code.
-</aside>
+<div class="story">
+<p>Prenons un exemple : j’ai récemment eu à tester un scénario qui impliquait le dépôt d’un *cookie* après une certaine requête. Le nombre de scénarios étant phénoménal (connecté / déconnecté, administrateur ou pas, *cookie* déjà présent, etc.), les reproduire à chaque itération de code était tellement pénible qu’on ne recettait plus tous les cas : on se contentait de tester le précédent qui avait échoué.</p>
+<p>Il aurait donc mieux valu avant tout écrire une suite de tests comprenant les scénarios que l’on allait rencontrer. Exécuter cette suite de tests pendant le développement aurait ainsi ensuite permis de vérifier la validité du code.</p>
+</div>
 
 Cependant, la dette technique est liée au code qui n’est pas écrit, et les tests sont eux-mêmes du code, qui peut contenir des erreurs.   
 Ainsi je vous recommande d’être pragmatique sur l’écriture et l'ajout de tests.
 
-<aside class="story">
+<div class="story">
 Exemple : en fonctionnant uniquement par tests unitaires pour tester une méthode dans 100% des cas, on en arrive à tester des situations irréalisables. Ainsi, pour faire passer les tests à la méthode en question, on ajoute du code contre ces situations, ce qui ajoute de la complexité au programme et augmente le nombre de scénarios à maintenir en cas de refactorisation.
-</aside>
+</div>
 
 Au moment où l’on décide de prendre des raccourcis dans l’implémentation pour pouvoir livrer plus vite un projet, les tests sont souvent les premiers à être supprimés. C’est dommage, mais c’est pragmatique. Ce que je recommande c’est d’ajouter au moins un test fonctionnel qui assurera la validation du bon déroulement du scénario le plus usuel et la transformation des objectifs.
 

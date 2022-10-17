@@ -66,19 +66,23 @@
     --font-type-content: Georgia, serif;
     --font-type-headlines: Inconsolata, sans-serif;
     --max-width: 28rem;
+    --background-color: var(--color-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #111416;
+    --color-primary-content: #ccc;
+    --link-color: #f96;
+  }
 }
 
 html {
     font-size: var(--font-size-base);
 }
-@media all and (min-width: 100em) {
-    html {
-        /* font-size: 2.5em; 40px @ root em of 1, 40/16 (root em is 1 the fluid root) */
-    }
-}
 body {
-    background-color: var(--color-white);
-    color: black;
+    background-color: var(--background-color);
+    color: var(--color-primary-content);
     font-family: var(--font-type-content);
     font-weight: normal;
     font-variant-ligatures: common-ligatures;
@@ -90,7 +94,7 @@ body {
 @media print {
     body {
         background-color: transparent;
-        color: black;
+        color: var(--color-primary-content);
     }
 }
 @media all and (min-width: 30em) {
@@ -192,57 +196,36 @@ li {
     }
 }
 h1 {
-    /* font-size: calc( 1.25em + 5 * ( (100vw - 20em) / ( 100 - 20) )); */
-    font-size: 2.45em;
+    font-size: 2.5em;
     font-weight: normal;
     line-height: 1;
     margin: 0;
 }
 h2 {
-    /* font-size: calc( 1.5em + (4.5 - 1.5) * ( (100vw - 20em) / ( 100 - 20) )); */
-    font-size: 2.10em;
+    font-size: 1.8rem;
     font-weight: normal;
     line-height: 1.125;
     margin: 4rem 0 0;
 }
 h3 {
-    /* font-size: calc( 1.25em + (3.75 - 1.25) * ( (100vw - 20em) / ( 100 - 20) )); */
-    font-size: 1.75em; /* 20px @ root em of 1 (20/16) */
+    font-size: 1.5em;
     font-weight: normal;
     line-height: 1.25;
     margin: 2rem 0 0;
 }
 h4 {
-    font-size: 1.125em; /* 18px @ root em of 1 (18/16) */
-    font-size: calc( 1.125em + (3.375 - 1.125) * ( (100vw - 20em) / ( 100 - 20) ));
+    font-size: 1.35em;
     font-weight: normal;
     line-height: 1.325;
     margin: 1.8rem 0 0;
 }
 h5 {
-    font-size: 1em; /* 16px @ root em of 1 (16/16) */
-    font-size: calc( 1em + (3 - 1) * ( (100vw - 20em) / ( 100 - 20) ));
+    font-size: 1.2em;
     font-weight: normal;
     line-height: 1.5;
     margin: 1.5rem 0 0;
 }
-@media all and (min-width: 100em) {
-    h1 {
-        font-size: 2.5em; /* 180px @ root em of 2.5 (180/40) */
-    }
-    h2 {
-        font-size: 1.8em; /* 72px @ root em of 2.5 (72/40) */
-    }
-    h3 {
-        font-size: 1.5em; /* 60px @ root em of 2.5 (60/40) */
-    }
-    h4 {
-        font-size: 1.35em; /* 54px @ root em of 2.5 (54/40) */
-    }
-    h5 {
-        font-size: 1.2em; /* 48px @ root em of 2.5 (48/40) */
-    }
-}
+
 @media print {
     h1,h2,h3,h4,h5 {
         page-break-after: avoid;
@@ -343,11 +326,23 @@ header {
     }
 }
 header hgroup {
-    min-height: calc(100vh - 2em);
+    /* min-height: calc(100vh - 2em); */
 }
 header hgroup h1 {
-    font-size: calc( 2.25em + 7 * ( (100vw - 20em) / ( 100 - 20) ));
+    font-size: calc( 3.5em + 11 * ( (100vw - 20em) / ( 100 - 20) ));
+    /* font-size: 2.5em; */
 }
+@media all and (min-width: 60em) {
+    header hgroup h1 {
+        font-size: calc( 3.5em + 5 * ( (100vw - 20em) / ( 100 - 20) ));
+    /* font-size: 2.5em; */
+    }
+}
+header hgroup h2 {
+    font-size: calc( 1.8em + 1 * ( (100vw - 20em) / ( 100 - 20) ));
+    /* font-size: 2.5em; */
+}
+
 /* header hgroup h1::first-line {
     font-size: 1.25em;
 } */
@@ -384,7 +379,7 @@ main {
 }
 main ::selection {
     background-color: var(--color-primary);
-    color: white;
+    color: var(--color-white);
 }
 main > h1 {
     letter-spacing: 0.025em;
@@ -463,9 +458,12 @@ nav h2,
 nav ol {
     margin-top: 1rem;
 }
+nav h2 {
+    font-size: 1.5em;
+}
 nav a {
     display: block;
-    padding: 1em;
+    padding: 0.5em 1em;
     text-decoration: none;
 }
 nav a:link,
@@ -532,18 +530,19 @@ nav li li cite {
 
 footer {
     display: block;
-    background-color: black;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     padding: 1em;
 }
 footer > p {
-    max-width: 25em;
+    max-width: var(--max-width);
     margin-left: auto;
     margin-right: auto;
 }
 footer a:link,
 footer a:visited {
-    color: rgba(255,51,51,0.9);
+    color: var(--color-white);
+    text-decoration: underline;
 }
 footer a:hover,
 footer a:focus {
@@ -552,7 +551,7 @@ footer a:focus {
 @media print {
     footer {
         background-color: transparent;
-        color: black;
+        color: var(--color-primary-content);
     }
     footer a:link,
     footer a:visited {

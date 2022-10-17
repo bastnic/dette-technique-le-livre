@@ -4,8 +4,6 @@
 <body>
   {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
   {{ block "main" . }}{{ end }}
-  {{ if not .IsHome }} 
   {{ partial "footer.html" . }}
-  {{ end }}
 </body>
 </html>
