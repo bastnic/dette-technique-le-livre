@@ -1,4 +1,4 @@
-baseURL = "https://bastien.jaillot.fr/dette-technique-test/"
+baseURL = "https://bastien.jaillot.fr/dette-technique-le-livre/"
 languageCode = "fr"
 DefaultContentLanguage = "fr"
 title = "Livre \"La dette technique\" par Bastien Jaillot"
@@ -10,7 +10,7 @@ rssLimit = 0
   tag = "tags"
 
 [params]
-  description = "Bastien Jaillot — développeur web — co-fondateur @jolicode et @opengovfr"
+  description = "Bastien Jaillot — développeur Web — co-fondateur @jolicode et @opengovfr"
   shortTitle = "La dette technique"
 
 [Author]
